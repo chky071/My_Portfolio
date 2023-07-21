@@ -5,14 +5,14 @@
   <link href="https://fonts.googleapis.com/css?family=Damion" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700" rel="stylesheet">
-  <link rel="stylesheet" href="./resources/css/reset.css">
+  
   <link rel="stylesheet" href="./resources/css/style.css" </head>
 
 <body>
   <!-- Header -->
   <header>
     <div class="content">
-      <a class="title">Chad Larry Meeks</a>
+      <a class="title" >Chad Larry Meeks</a>
       <nav class="desktop">
         <ul>
           <li><a href="#About_Me">About Me</a></li>
@@ -36,6 +36,7 @@
     <!-- Projects -->
     <div class="Projects">
       <h2 id="Projects">Projects</h2>
+
       <section class="image-section">
         <div class="image-box">
           <a href="file:///Users/chadmeeks/Documents/Projects/Hill%20Roller%20Club/index.html" target="blank">
@@ -68,6 +69,7 @@
         </div>
       </section>
 
+
     </div>
 
     <!-- Skills -->
@@ -97,6 +99,27 @@
     </footer>
 
   </div>
+  <script>
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    const title = document.querySelector('.title');
+
+    title.addEventListener('mouseover', () => {
+      const randomColor = getRandomColor();
+      title.style.color = randomColor;
+    });
+
+    title.addEventListener('mouseout', () => {
+      title.style.color = '#4a4a4a'; // Reset to the original color when mouse leaves
+    });
+  </script>
 </body>
 
 </html>

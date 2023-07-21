@@ -29,9 +29,12 @@ header .content {
   padding-top: 120px;
 }
 
+
+
 .image-section {
   display: flex;
-  justify-content: space-between;
+  flex-wrap:wrap;
+  justify-content: space-around;
   align-items: center;
   padding: 0 50px;
 }
@@ -81,6 +84,7 @@ header .content {
   display: flex;
   justify-content: space-between;
 padding: 0 50px;
+flex-wrap:wrap;
 }
 
 .icon {
@@ -155,4 +159,20 @@ footer .content {
 
 footer .copyright {
   flex-grow: 1;
+}
+
+@media (max-width: 600px) {
+  header nav ul {
+    flex-direction: column; /* Stack the list items vertically */
+  }
+
+  nav li {
+    padding-left: 0; /* Remove left padding for stacked items */
+    padding-bottom: 1rem; /* Add some space between stacked items */
+  }
+
+  #About_Me{
+    padding-top: 310px;
+  }
+  
 }
